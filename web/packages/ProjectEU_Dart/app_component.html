@@ -1,0 +1,29 @@
+<material-tab-panel>
+    <material-tab label="New entry">
+        <div>
+            <form>
+            <material-input [(ngModel)]="english" floatingLabel required label="English"></material-input>
+            <material-input [(ngModel)]="german" floatingLabel required label="German"></material-input>
+            <material-input [(ngModel)]="finnish" floatingLabel required label="Finnish"></material-input>
+            <material-input [(ngModel)]="romanian" floatingLabel required label="Romanian"></material-input>
+            <material-button raised (trigger)="addNewEntry()">Submit</material-button>
+            </form>
+        </div>
+    </material-tab>
+    <material-tab label="Show entry">
+        <div>
+            Tab 2 contents, on the other hand, look thusly.
+        </div>
+    </material-tab>
+    <material-tab label="Delete entry">
+        <div>
+            <h3>Tab 3 is serious about its contents</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore magni
+                necessitatibus quam qui quis rerum sit, sunt voluptatum. Commodi,
+                corporis minus nemo officiis quisquam rem. Magni odit quo temporibus
+                veritatis!
+            </p>
+        </div>
+    </material-tab>
+</material-tab-panel>

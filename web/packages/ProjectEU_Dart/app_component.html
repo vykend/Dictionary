@@ -6,47 +6,8 @@
             <material-input [(ngModel)]="german" floatingLabel label="German"></material-input>
             <material-input [(ngModel)]="finnish" floatingLabel label="Finnish"></material-input>
             <material-input [(ngModel)]="romanian" floatingLabel label="Romanian"></material-input>
+                <p></p>
             <material-button raised (trigger)="addNewEntry()">Submit</material-button>
-                <modal [visible]="errorDialog">
-                    <material-dialog class="basic-dialog">
-
-                        <h3 header>Error</h3>
-
-                        <p>
-                            Please fill all fields!
-                        </p>
-
-                        <div footer>
-                            <material-button autoFocus
-                                             clear-size
-                                             (trigger)="errorDialog = false"
-                                             class="white">
-                                Close
-                            </material-button>
-                        </div>
-
-                    </material-dialog>
-                </modal>
-                <modal [visible]="successDialog">
-                    <material-dialog class="basic-dialog">
-
-                        <h3 header>Success</h3>
-
-                        <p>
-                            Entry succesfully added!
-                        </p>
-
-                        <div footer>
-                            <material-button autoFocus
-                                             clear-size
-                                             (trigger)="successDialog = false"
-                                             class="white">
-                                Close
-                            </material-button>
-                        </div>
-
-                    </material-dialog>
-                </modal>
             </form>
         </div>
     </material-tab>
@@ -67,3 +28,51 @@
         </div>
     </material-tab>
 </material-tab-panel>
+<p></p>
+<material-button raised (trigger)="download()">Download dictionary</material-button>
+<p style="padding-top: 20px"></p>
+<p>Upload dictionary...</p>
+<form id="read">
+    <input type="file" id="files_input_element" name="file" />
+</form>
+<p>Or</p>
+<div id="drop-zone">Drop file here</div>
+<output id="list"></output>
+<modal [visible]="errorDialog">
+    <material-dialog class="basic-dialog">
+
+        <h3 header>Error</h3>
+
+        <p id="error">
+        </p>
+
+        <div footer>
+            <material-button autoFocus
+                             clear-size
+                             (trigger)="errorDialog = false"
+                             class="white">
+                Close
+            </material-button>
+        </div>
+
+    </material-dialog>
+</modal>
+<modal [visible]="successDialog">
+    <material-dialog class="basic-dialog">
+
+        <h3 header>Success</h3>
+
+        <p id="success">
+        </p>
+
+        <div footer>
+            <material-button autoFocus
+                             clear-size
+                             (trigger)="successDialog = false"
+                             class="white">
+                Close
+            </material-button>
+        </div>
+
+    </material-dialog>
+</modal>

@@ -13,6 +13,10 @@
       {
         "1": "dart:io",
         "5": false
+      },
+      {
+        "1": "dart:async",
+        "5": false
       }
     ],
     "5": [
@@ -24,6 +28,12 @@
           },
           {
             "2": "materialDirectives"
+          },
+          {
+            "2": "ModalComponent"
+          },
+          {
+            "2": "MaterialDialogComponent"
           }
         ]
       }
@@ -65,7 +75,7 @@
       "lifecycleHooks": [],
       "template": {
         "encapsulation": 0,
-        "template": "<material-tab-panel>\n    <material-tab label=\"New entry\">\n        <div>\n            <form>\n            <material-input [(ngModel)]=\"english\" floatingLabel required label=\"English\"></material-input>\n            <material-input [(ngModel)]=\"german\" floatingLabel required label=\"German\"></material-input>\n            <material-input [(ngModel)]=\"finnish\" floatingLabel required label=\"Finnish\"></material-input>\n            <material-input [(ngModel)]=\"romanian\" floatingLabel required label=\"Romanian\"></material-input>\n            <material-button raised (trigger)=\"addNewEntry()\">Submit</material-button>\n            </form>\n        </div>\n    </material-tab>\n    <material-tab label=\"Show entry\">\n        <div>\n            Tab 2 contents, on the other hand, look thusly.\n        </div>\n    </material-tab>\n    <material-tab label=\"Delete entry\">\n        <div>\n            <h3>Tab 3 is serious about its contents</h3>\n            <p>\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore magni\n                necessitatibus quam qui quis rerum sit, sunt voluptatum. Commodi,\n                corporis minus nemo officiis quisquam rem. Magni odit quo temporibus\n                veritatis!\n            </p>\n        </div>\n    </material-tab>\n</material-tab-panel>\n",
+        "template": "<material-tab-panel>\n    <material-tab label=\"New entry\">\n        <div>\n            <form>\n            <material-input [(ngModel)]=\"english\" floatingLabel label=\"English\"></material-input>\n            <material-input [(ngModel)]=\"german\" floatingLabel label=\"German\"></material-input>\n            <material-input [(ngModel)]=\"finnish\" floatingLabel label=\"Finnish\"></material-input>\n            <material-input [(ngModel)]=\"romanian\" floatingLabel label=\"Romanian\"></material-input>\n            <material-button raised (trigger)=\"addNewEntry()\">Submit</material-button>\n                <modal [visible]=\"errorDialog\">\n                    <material-dialog class=\"basic-dialog\">\n\n                        <h3 header>Error</h3>\n\n                        <p>\n                            Please fill all fields!\n                        </p>\n\n                        <div footer>\n                            <material-button autoFocus\n                                             clear-size\n                                             (trigger)=\"errorDialog = false\"\n                                             class=\"white\">\n                                Close\n                            </material-button>\n                        </div>\n\n                    </material-dialog>\n                </modal>\n                <modal [visible]=\"successDialog\">\n                    <material-dialog class=\"basic-dialog\">\n\n                        <h3 header>Success</h3>\n\n                        <p>\n                            Entry succesfully added!\n                        </p>\n\n                        <div footer>\n                            <material-button autoFocus\n                                             clear-size\n                                             (trigger)=\"successDialog = false\"\n                                             class=\"white\">\n                                Close\n                            </material-button>\n                        </div>\n\n                    </material-dialog>\n                </modal>\n            </form>\n        </div>\n    </material-tab>\n    <material-tab label=\"Show entry\">\n        <div>\n            Tab 2 contents, on the other hand, look thusly.\n        </div>\n    </material-tab>\n    <material-tab label=\"Delete entry\">\n        <div>\n            <h3>Tab 3 is serious about its contents</h3>\n            <p>\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore magni\n                necessitatibus quam qui quis rerum sit, sunt voluptatum. Commodi,\n                corporis minus nemo officiis quisquam rem. Magni odit quo temporibus\n                veritatis!\n            </p>\n        </div>\n    </material-tab>\n</material-tab-panel>\n",
         "templateUrl": "asset:ProjectEU_Dart/lib/app_component.html",
         "styles": [],
         "styleUrls": [

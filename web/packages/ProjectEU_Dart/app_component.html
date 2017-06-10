@@ -2,11 +2,51 @@
     <material-tab label="New entry">
         <div>
             <form>
-            <material-input [(ngModel)]="english" floatingLabel required label="English"></material-input>
-            <material-input [(ngModel)]="german" floatingLabel required label="German"></material-input>
-            <material-input [(ngModel)]="finnish" floatingLabel required label="Finnish"></material-input>
-            <material-input [(ngModel)]="romanian" floatingLabel required label="Romanian"></material-input>
+            <material-input [(ngModel)]="english" floatingLabel label="English"></material-input>
+            <material-input [(ngModel)]="german" floatingLabel label="German"></material-input>
+            <material-input [(ngModel)]="finnish" floatingLabel label="Finnish"></material-input>
+            <material-input [(ngModel)]="romanian" floatingLabel label="Romanian"></material-input>
             <material-button raised (trigger)="addNewEntry()">Submit</material-button>
+                <modal [visible]="errorDialog">
+                    <material-dialog class="basic-dialog">
+
+                        <h3 header>Error</h3>
+
+                        <p>
+                            Please fill all fields!
+                        </p>
+
+                        <div footer>
+                            <material-button autoFocus
+                                             clear-size
+                                             (trigger)="errorDialog = false"
+                                             class="white">
+                                Close
+                            </material-button>
+                        </div>
+
+                    </material-dialog>
+                </modal>
+                <modal [visible]="successDialog">
+                    <material-dialog class="basic-dialog">
+
+                        <h3 header>Success</h3>
+
+                        <p>
+                            Entry succesfully added!
+                        </p>
+
+                        <div footer>
+                            <material-button autoFocus
+                                             clear-size
+                                             (trigger)="successDialog = false"
+                                             class="white">
+                                Close
+                            </material-button>
+                        </div>
+
+                    </material-dialog>
+                </modal>
             </form>
         </div>
     </material-tab>

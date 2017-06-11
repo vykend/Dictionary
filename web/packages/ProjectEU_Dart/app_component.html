@@ -33,10 +33,10 @@
 <p style="padding-top: 20px"></p>
 <p>Upload dictionary...</p>
 <form id="read">
-    <input type="file" id="files_input_element" name="file" />
+    <input type="file" id="files_input_element" name="files[]" multiple />
 </form>
 <p>Or</p>
-<div id="drop-zone">Drop file here</div>
+<div id="drop-zone">Drop files here</div>
 <output id="list"></output>
 <modal [visible]="errorDialog">
     <material-dialog class="basic-dialog">
@@ -69,6 +69,25 @@
             <material-button autoFocus
                              clear-size
                              (trigger)="successDialog = false"
+                             class="white">
+                Close
+            </material-button>
+        </div>
+
+    </material-dialog>
+</modal>
+<modal [visible]="infoDialog">
+    <material-dialog class="basic-dialog">
+
+        <h3 header>Info</h3>
+
+        <p id="info">
+        </p>
+
+        <div footer>
+            <material-button autoFocus
+                             clear-size
+                             (trigger)="infoDialog = false"
                              class="white">
                 Close
             </material-button>

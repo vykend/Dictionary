@@ -8680,18 +8680,21 @@ for(z=this.b,y=z.length,x=a.a,w=a.b,v=a.c,u=a.d,t=a.e,s=0;s<z.length;z.length===
 if(J.r(r.a,x)&&J.r(r.b,w)&&J.r(r.c,v)&&J.r(r.d,u)&&J.r(r.e,t))return!0}return!1},
 Ih:[function(){var z,y
 this.c=""
-z=this.d
-if(z==null||this.e==null||this.f==null||this.r==null||this.x==null||J.r(z,"")||J.r(this.e,"")||J.r(this.f,"")||J.r(this.r,"")||J.r(this.x,"")){document.querySelector("#error").textContent="Please fill all fields!"
+z=!J.r(this.d,"")?1:0
+if(!J.r(this.e,""))++z
+if(!J.r(this.f,""))++z
+if(!J.r(this.r,""))++z
+if((!J.r(this.x,"")?z+1:z)<2){document.querySelector("#error").textContent="Please fill atleast 2 languages!"
 this.y=!0
 return}y=new Q.pP(this.d,this.e,this.f,this.r,this.x)
 if(!this.rl(y))this.b.push(y)
 document.querySelector("#success").textContent="Entry succesfully added!"
 this.z=!0
-this.d=null
-this.e=null
-this.f=null
-this.r=null
-this.x=null},"$0","gCQ",0,0,0],
+this.d=""
+this.e=""
+this.f=""
+this.r=""
+this.x=""},"$0","gCQ",0,0,0],
 rv:[function(a){var z=0,y=P.bx(),x,w=this,v,u,t,s,r,q
 var $async$rv=P.bt(function(b,c){if(b===1)return P.bF(c,y)
 while(true)switch(z){case 0:v=w.b
@@ -11136,7 +11139,7 @@ if(y==null){y=$.N.O("",C.e,C.kA)
 $.rv=y}z.N(y)
 this.fx=z
 this.r=z.r
-y=new Q.iC(["English","German","Finnish","Romanian","Czech"],[],"",null,null,null,null,null,null,null,!0,null,!1,!1,!1,!1,!1,null,!1,!1,!1,!1,!1,null,null,null,null)
+y=new Q.iC(["English","German","Finnish","Romanian","Czech"],[],"","","","","","",null,null,!0,null,!1,!1,!1,!1,!1,null,!1,!1,!1,!1,!1,null,null,null,null)
 this.fy=y
 x=this.dx
 z.db=y
@@ -11171,7 +11174,7 @@ this.fx.v()},
 A:function(){this.fx.u()},
 $asc:I.M},
 T2:{"^":"a:0;",
-$0:[function(){return new Q.iC(["English","German","Finnish","Romanian","Czech"],[],"",null,null,null,null,null,null,null,!0,null,!1,!1,!1,!1,!1,null,!1,!1,!1,!1,!1,null,null,null,null)},null,null,0,0,null,"call"]}}],["","",,F,{"^":"",
+$0:[function(){return new Q.iC(["English","German","Finnish","Romanian","Czech"],[],"","","","","","",null,null,!0,null,!1,!1,!1,!1,!1,null,!1,!1,!1,!1,!1,null,null,null,null)},null,null,0,0,null,"call"]}}],["","",,F,{"^":"",
 J:function(){if($.w1)return
 $.w1=!0
 L.aY()

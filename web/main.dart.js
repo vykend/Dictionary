@@ -9577,7 +9577,7 @@ this.aC.appendChild(g5)
 y=S.G(x,"p",this.aC)
 this.tf=y
 this.T(y)
-g6=x.createTextNode('On tab "New" you can add new entry to the current dictionary. You have to fill all languages for entry to be accepted.')
+g6=x.createTextNode('On tab "New" you can add new entry to the current dictionary. You have to at least 2 languages for entry to be accepted.')
 this.tf.appendChild(g6)
 g7=x.createTextNode("\n\t\t")
 this.aC.appendChild(g7)

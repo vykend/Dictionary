@@ -1,0 +1,27 @@
+{
+  "ngDeps": null,
+  "type": {
+    "Proposition": {
+      "class": "Identifier",
+      "name": "Proposition",
+      "moduleUrl": "asset:ProjectEU_Dart/lib/question.dart",
+      "prefix": null,
+      "value": null
+    },
+    "Question": {
+      "class": "Identifier",
+      "name": "Question",
+      "moduleUrl": "asset:ProjectEU_Dart/lib/question.dart",
+      "prefix": null,
+      "value": null
+    },
+    "User": {
+      "class": "Identifier",
+      "name": "User",
+      "moduleUrl": "asset:ProjectEU_Dart/lib/question.dart",
+      "prefix": null,
+      "value": null
+    }
+  },
+  "alias": {}
+}

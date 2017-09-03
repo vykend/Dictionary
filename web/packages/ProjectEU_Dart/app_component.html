@@ -138,7 +138,8 @@
     </material-tab>
 </material-tab-panel>
 <p></p>
-<material-button raised (trigger)="download()">Download dictionary</material-button>
+<material-button id="downloadButton" raised (trigger)="download()">Generate file for download</material-button>
+<p id="textDownload"></p>
 <p style="padding-top: 20px"></p>
 <p>Upload dictionary...</p>
 <form id="read">

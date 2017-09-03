@@ -8815,9 +8815,8 @@ if(u===0){document.querySelector("#error").textContent="Dictionary is empty!"
 w.x=!0
 z=1
 break}for(t="",s=0;s<v.length;v.length===u||(0,H.ax)(v),++s){r=v[s]
-t=C.o.a3(t,P.Pr(C.iT,J.Y(J.Y(J.Y(J.Y(J.Y(J.Y(J.Y(J.Y(J.Y(r.a,";"),r.b),";"),r.c),";"),r.d),";"),r.e),"\n"),C.ey,!1))}v="data:text/plain;charset=utf-8,"+t
-q=document.createElement("a")
-q.href=v
+t=C.o.a3(t,P.Pr(C.iT,J.Y(J.Y(J.Y(J.Y(J.Y(J.Y(J.Y(J.Y(J.Y(r.a,";"),r.b),";"),r.c),";"),r.d),";"),r.e),"\n"),C.ey,!1))}q=document.createElement("a")
+q.href="data:text/plain;charset=utf-8,"+t
 q.setAttribute("download","dictionary.csv")
 q.click()
 case 1:return P.bL(x,y)}})

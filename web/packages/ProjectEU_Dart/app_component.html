@@ -122,7 +122,8 @@
     <div style="width: 100%">
 		<h3>WARNING: Closing the app will reset current dictionary!</h3>
 		<p>Download your dictionary before leaving the app!</p>
-		<p>Everyone has his own copy of the dictionary, this app works on that local copy, nothing is synced to server.</p>		
+		<p>Everyone has his own copy of the dictionary, this app works on that local copy, nothing is synced to server.</p>
+    <h3>It is recommended to use GOOGLE CHROME on Windows, in other browsers app may not work correctly.</h3>
 		<p style="height: 1em"></p>
 		<h3>Instructions</h3>
 		<p>On tab "New" you can add new entry to the current dictionary. You have to at least 2 languages for entry to be accepted.</p>
@@ -139,7 +140,7 @@
 </material-tab-panel>
 <p></p>
 <material-button id="downloadButton" raised (trigger)="download()">Generate file for download</material-button>
-<p id="textDownload"></p>
+<a href='javascript:void(0)' id="textDownload"></a>
 <p style="padding-top: 20px"></p>
 <p>Upload dictionary...</p>
 <form id="read">
